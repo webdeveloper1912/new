@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  
+  <!-- Bootstrap CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  
+  <!-- FontAwesome CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/custom.css">
+  
+  <title>Login</title>
+  <script src="../js/angular.js "> </script>
+    <script src="../js/script.js "> </script>
+</head>
+<body ng-app="MyApplication" ng-controller="logincontroller">
+
+  <!-- Bootstrap container. This holds everything on this page -->
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <br>
+        <!-- Form starts here -->
+        <form name="login" method="POST" ng-submit="submitForm(login.$valid)" novalidate >
+          <!-- Row1 starts here -->
+               <div class="row">
+               <div class="col-sm-6 offset-sm-3" >
+               <label for="userid"></label>
+                 <input type="text" class="form-control" id="userid" placeholder="Enter UserID" name="userid" ng-model="userid" autofocus required>
+                     <p ng-show="login.name.$invalid && !login.name.$pristine" class="help-block">You name is required.</p>
+
+              </div>
+              <br/>
+              <br/>
+               </div>
+               <!-- Row2 starts here -->
+               <div class="row">
+               <div class="col-sm-6 offset-sm-3">
+               <label for="password"></label>
+                 <input type="password" class="form-control" id="password" placeholder="Enter Password" ng-model="password">
+              
+              </div>
+              </div>
+            </div>
+          <br>
+          <!-- Row3 starts here (Submit row) -->
+          <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+               <button type="submit" class="btn btn-success form-control" ng-disabled ="login.$invalid">Login </button>
+            </div>
+          </div>
+        </form>
+            </div>
+            </div>
+            </div>
+  <!-- Javascript on CDN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    
+</body>
+</html>
